@@ -33,13 +33,13 @@ The workflow details how we handle the highly imbalanced dataset where fraud cas
 
 For each type of sampling, we implement the following Supervised Machine Learning methods for classification:
 
-1. Logistic Regression
-2. Tree-Based Models
+1. **Logistic Regression**
+2. **Tree-Based Models**
    * Random Forest
    * Gradient Boosting
    * Bagging Classifier
    * XGBoost
-3. Anomaly Detection Models
+3. **Anomaly Detection Models**
    * Autoencoder
    * One-Class Support Vector Machine
 
