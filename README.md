@@ -24,7 +24,7 @@ Each model was evaluated using the following metrics on the Training, Testing, a
 
 We ultimately relied most on AUC-PR to evaluate each model.
 
-Key Takeaways:
+**Key Takeaways:**
 
 * Models struggled with the imbalanced data (fraud rate <1%).
 * Undersampling and oversampling improved performance in the supervised ML Models, but not significantly.
