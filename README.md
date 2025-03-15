@@ -8,11 +8,9 @@ Felix van Kleef, Kelechi Isiugo, Robin Lee, Sebastian Rivera
 
 <br>
 
-## Resampling & Modeling Framework
+## Modeling Framework
 
 We are leveraging simulated financial payment services data to build a predictive model capable of identifying fraudulent transactions.  Our methodology will encompass two key phases: conducting a comprehensive exploratory data analysis and feature engineering to uncover transaction patterns and anomalies, followed by implementing and evaluating a suite of machine learning algorithms to develop an accurate classification model.
-
-![image](https://github.com/user-attachments/assets/7fa87a8d-8526-4dd3-9e1f-050b12c56392)
 
 The workflow details how we handle the highly imbalanced dataset where fraud cases are less than 1% of the total data. The dataset is processed using three different strategies to balance fraud and non-fraud cases before training machine learning models:
 
@@ -30,6 +28,8 @@ The workflow details how we handle the highly imbalanced dataset where fraud cas
    * The entire dataset is used without resampling, but class weights are adjusted to balance fraud cases during model training.
    * Data is split into training and testing sets.
    * Models are trained and validated on a dataset with the original fraud rate (<1%).
+  
+![image](https://github.com/user-attachments/assets/7fa87a8d-8526-4dd3-9e1f-050b12c56392)
 
 For each type of sampling, we implement the following Supervised Machine Learning methods for classification:
 
