@@ -14,15 +14,36 @@ We are leveraging simulated financial payment services data to build a predictiv
 
 ![image](https://github.com/user-attachments/assets/7fa87a8d-8526-4dd3-9e1f-050b12c56392)
 
-## Model Implementation
+The workflow details how we handle the highly imbalanced dataset where fraud cases are less than 1% of the total data. The dataset is processed using three different strategies to balance fraud and non-fraud cases before training machine learning models:
 
-For each type of sampling, we implemented the following Supervised Machine Learning methods for classification:
+1. Undersampling Non-Fraud:
+   * The non-fraudulent cases are reduced to increase the fraud rate to approximately 33%.
+   * The data is split into training and testing sets.
+   * Models are trained and validated on a separate dataset with the original fraud rate (<1%).
+   
+2. Oversampling using SMOTE:
+   * Synthetic Minority Over-sampling Technique (SMOTE) is used to increase fraud cases, raising the fraud rate to about 50%.
+   * Data is split into training and testing sets.
+   * Models are trained and validated on a dataset with the original fraud rate (<1%).
+   
+3. Class Weight Adjustment on Complete Data:
+   * The entire dataset is used without resampling, but class weights are adjusted to balance fraud cases during model training.
+   * Data is split into training and testing sets.
+   * Models are trained and validated on a dataset with the original fraud rate (<1%).
 
-* Logistic Regression
-* Tree-Based Models (Random Forest, Gradient Boosting, Bagging Classifier, XGBoost)
-* Anomaly Detection Models (Autoencoder and One-Class Support Vector Machine)
+For each type of sampling, we implement the following Supervised Machine Learning methods for classification:
 
-Each model was evaluated using the following metrics on the Training, Testing, and Validation Datasets:
+1. Logistic Regression
+2. Tree-Based Models
+   * Random Forest
+   * Gradient Boosting
+   * Bagging Classifier
+   * XGBoost
+3. Anomaly Detection Models
+   * Autoencoder
+   * One-Class Support Vector Machine
+
+Each model is evaluated using the following metrics on the Training, Testing, and Validation Datasets:
 
 * Accuracy
 * Precision
