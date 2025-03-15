@@ -6,6 +6,14 @@ Felix van Kleef, Kelechi Isiugo, Robin Lee, Sebastian Rivera
 
 **Originally delivered as pptx presentation. Main takeaways below.**
 
+Data: 
+
+https://www.kaggle.com/datasets/arunavakrchakraborty/financial-payment-services-fraud-data
+
+Context: 
+
+Develop a classifier for predicting fraudulent transactions for a financial company and use insights from the model to develop an actionable plan. Data for the case is available in CSV format having 6362620 rows and 11 columns.
+
 <br>
 
 ## Modeling Framework
