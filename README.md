@@ -29,3 +29,8 @@ We ultimately relied most on AUC-PR to evaluate each model.
 * Models struggled with the imbalanced data (fraud rate <1%).
 * Undersampling and oversampling improved performance in the supervised ML Models, but not significantly.
 * XGBoost performed best on the oversampled data, and One-Class SVM was the best anomaly detection model.
+
+![image](https://github.com/user-attachments/assets/ddbcfc7d-0060-4866-bdf1-6a8035a3a7df)
+![image](https://github.com/user-attachments/assets/c8e70583-6bd4-4ce0-9b29-d5041c063e16)
+
+
