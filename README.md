@@ -65,7 +65,10 @@ Each model is evaluated using the following metrics on the Training, Testing, an
 * Specificity
 * F1-Score
 
-<mark>We ultimately relied most on AUC-PR to evaluate each model.</mark> AUC-PR is preferred in fraud detection because it gives a more realistic evaluation of a model’s ability to identify fraudulent transactions without being influenced by the overwhelming number of non-fraud cases. AUC-PR focuses only on Precision (how many predicted frauds are actually frauds) and Recall (how many actual frauds were correctly detected), making it more informative. Precision-Recall (PR) curves better capture performance when false positives (FP) and false negatives (FN) matter more than true negatives (TN).
+<mark>We ultimately relied most on AUC-PR to evaluate each model.</mark> 
+
+* AUC-PR focuses only on Precision (how many predicted frauds are actually frauds) and Recall (how many actual frauds were correctly detected).
+* The Precision-Recall curve better captures performance when false positives and false negatives matter more than true negatives.
 
 ## Key Takeaways
 
