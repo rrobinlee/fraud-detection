@@ -65,7 +65,7 @@ Each model is evaluated using the following metrics on the Training, Testing, an
 * Specificity
 * F1-Score
 
-<mark>We ultimately relied most on AUC-PR to evaluate each model.</mark> 
+<mark>We relied most on AUC-PR to evaluate each model.</mark> 
 
 * AUC-PR focuses only on Precision (how many predicted frauds are actually frauds) and Recall (how many actual frauds were correctly detected).
 * The Precision-Recall curve better captures performance when false positives and false negatives matter more than true negatives.
