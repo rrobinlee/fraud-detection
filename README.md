@@ -14,29 +14,24 @@ https://www.kaggle.com/datasets/arunavakrchakraborty/financial-payment-services-
 
 Develop a classifier for predicting fraudulent transactions for a financial company and use insights from the model to develop an actionable plan. Data for the case is available in CSV format having 6362620 rows and 11 columns.
 
-
-<br>
-
-## Modeling Framework
-
-We are leveraging simulated financial payment services data to build a predictive model capable of identifying fraudulent transactions.  Our methodology will encompass two key phases: conducting a comprehensive exploratory data analysis and feature engineering to uncover transaction patterns and anomalies, followed by implementing and evaluating a suite of machine learning algorithms to develop an accurate classification model.
+**Handling Imbalanced Data:**
 
 The workflow details how we handle the highly imbalanced dataset where fraud cases are less than 1% of the total data. The dataset is processed using three different strategies to balance fraud and non-fraud cases before training machine learning models:
-  
-![image](https://github.com/user-attachments/assets/7fa87a8d-8526-4dd3-9e1f-050b12c56392)
 
-|Undersampling Non-Fraud|Oversampling using SMOTE|Class Weight Adjustment on Complete Data|
-|-|-|-|
+|Undersampling Non-Fraud|Oversampling using SMOTE|Balanced Class Weight Adjustment|
+|:-|:-|:-|
 |The non-fraudulent cases are reduced to increase the fraud rate to approximately 33%.|Synthetic Minority Over-sampling Technique (SMOTE) is used to increase fraud cases, raising the fraud rate to about 50%.|The entire dataset is used without resampling, but class weights are adjusted to balance fraud cases during model training.|
+
+**Model Development:**
 
 For each type of sampling, we implement the following Supervised Machine Learning methods for classification:
 
 1. **Logistic Regression**
 2. **Tree-Based Models**
-   * Random Forest
-   * Gradient Boosting
+   * Random Forest Classifier
+   * Gradient Boosting Classifier
    * Bagging Classifier
-   * XGBoost
+   * XGBoost Classifier
 3. **Anomaly Detection Models**
    * Autoencoder
    * One-Class Support Vector Machine
@@ -51,7 +46,7 @@ Each model is evaluated using the following metrics on the Training, Testing, an
 * Specificity
 * F1-Score
 
-<mark>We relied most on AUC-PR to evaluate each model.</mark> 
+<mark>We relied mostly on AUC-PR to evaluate each model.</mark> 
 
 * AUC-PR focuses only on Precision (how many predicted frauds are actually frauds) and Recall (how many actual frauds were correctly detected).
 * The Precision-Recall curve better captures performance when false positives and false negatives matter more than true negatives.
@@ -62,16 +57,24 @@ Each model is evaluated using the following metrics on the Training, Testing, an
 * Undersampling and oversampling improved performance in the supervised ML Models, but not significantly.
 * <mark>XGBoost performed best on the oversampled data, and One-Class SVM was the best anomaly detection model.</mark>
 
-### Validation Metrics for Undersampled Data
+#### Validation Metrics for Undersampled Data
 
-![image](https://github.com/user-attachments/assets/4d30ffa8-ec10-4f2f-a43a-2cdd1c8c70f0)
+|All Model Diagnostics|Best Model: Random Forest|
+|:-|:-|
+|![image](https://github.com/user-attachments/assets/e46025d9-e563-4b15-a625-7303aa9964d5)|![image](https://github.com/user-attachments/assets/6ba58ef8-b5d1-42c5-8fb4-47e806d804ab)|
 
-### <mark>Validation Metrics for Oversampled Data using SMOTE</mark>
 
-![image](https://github.com/user-attachments/assets/c8e70583-6bd4-4ce0-9b29-d5041c063e16)
+#### <mark>Validation Metrics for Oversampled Data using SMOTE</mark>
 
-### Validation Metrics for Class-Weighted Data
+|All Model Diagnostics|Best Model: XGBoost|
+|:-|:-|
+|![image](https://github.com/user-attachments/assets/25a5678b-be28-4464-bb3e-f6dba49806d3)|![image](https://github.com/user-attachments/assets/b672e131-9354-4260-98fe-a90cef2f1187)|
 
-![image](https://github.com/user-attachments/assets/7725fdb6-45b3-4dbb-b9d1-c3b02d8ae641)
+#### Validation Metrics for Class-Weighted Data
+
+|All Model Diagnostics|Best Model: XGBoost|
+|:-|:-|
+|![image](https://github.com/user-attachments/assets/112ab953-5389-4090-8266-8558d75607ce)|![image](https://github.com/user-attachments/assets/6798d28a-b25c-4e47-b980-d4bdea0c89cf)|
+
 
 
