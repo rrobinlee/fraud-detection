@@ -1,7 +1,5 @@
 ## Identifying Fraudulent Transactions in Financial Payment Service Data using Ensemble Learning and SMOTE
 
-**Context:** 
-
 Develop a classifier for predicting fraudulent transactions for a financial company and use insights from the model to develop an actionable plan. Data for the case is available in CSV format having 6362620 rows and 11 columns. 
 
 > https://www.kaggle.com/datasets/arunavakrchakraborty/financial-payment-services-fraud-data
