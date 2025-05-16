@@ -8,7 +8,7 @@ Develop a classifier for predicting fraudulent transactions for a financial comp
 
 The workflow details how we handle the highly imbalanced dataset where fraud cases are less than 1% of the total data. The dataset is processed using three different strategies to balance fraud and non-fraud cases before training machine learning models:
 
-|1. Undersampling Non-Fraud|2. Oversampling using SMOTE|3. Balanced Class Weight Adjustment|
+|1. Undersampling Non-Fraud|2. Oversampling using SMOTE|3. Balanced Class Weight|
 |:-|:-|:-|
 |The non-fraudulent cases are reduced to increase the fraud rate to approximately 33%.|Synthetic Minority Over-sampling Technique (SMOTE) is used to increase fraud cases, raising the fraud rate to about 50%.|The entire dataset is used without resampling, but class weights are adjusted to balance fraud cases during model training.|
 
