@@ -20,7 +20,7 @@ For each type of sampling, we implement the following Supervised Machine Learnin
 
 1. **Logistic Regression** 
 2. **Tree-Based Models**
-   * Random Forest Classifier:
+   * Random Forest Classifier
    * Gradient Boosting Classifier
    * Bagging Classifier
    * XGBoost Classifier
