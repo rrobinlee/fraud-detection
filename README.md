@@ -17,7 +17,7 @@ The workflow details how we handle the highly imbalanced dataset where fraud cas
 For each type of sampling, we implement the following Supervised Machine Learning methods for classification:
 
 > 1. **Logistic Regression (Baseline)** 
-> 2. **Tree-Based Classifier:** Random Forest, Gradient Boosting, Bagging, XGBoost
+> 2. **Ensemble Classifier:** Random Forest, Gradient Boosting, Bagging, XGBoost
 > 3. **Anomaly Detection:** Autoencoder, One-Class Support Vector Machine
 
 Each model is evaluated using **Area Under the Curve - Precision Recall (AUC-PR)** on the Training, Testing, and Validation Datasets:
