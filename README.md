@@ -27,8 +27,8 @@ Each model is evaluated using **Area Under the Curve - Precision Recall (AUC-PR)
 
 ## Key Takeaways
 
-* Our best-performing approach—oversampling with SMOTE—helped balance recall and precision, making it the most effective method for identifying fraudulent transactions.
-  * **Precision: 0.9875, Recall: 0.9996, AUC-PR: 0.9999**
+* Our best-performing approach—**oversampling with SMOTE and modeling with XGBoost**—helped balance recall and precision, making it the most effective method for identifying fraudulent transactions.
+  * **Precision: 0.9875, Recall: 0.9996, AUC-PR: 0.9999**</mark>
   * However, improving model performance further will require incorporating richer features, such as merchant identities and geographic transaction patterns, to enhance predictive power and reduce false positives.
     
 * Looking ahead, a key improvement would be leveraging distributed computing frameworks, such as Apache Spark, to scale fraud detection modeling efficiently. Given the vast volume of financial transactions in real-world applications, single-machine models are not practical for handling large datasets or complex hyperparameter tuning. Distributed systems enable parallel processing, allowing us to train more sophisticated models faster and at scale. Implementing such solutions would enhance fraud detection accuracy and ensure models remain robust in production environments.
