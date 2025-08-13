@@ -1,4 +1,4 @@
-## Identifying Fraudulent Transactions in Financial Payment Service Data using Ensemble Learning and SMOTE
+# Identifying Fraudulent Transactions in Financial Payment Service Data using Ensemble Learning and SMOTE
 
 We seek to develop a classifier for predicting fraudulent transactions for a financial company and use insights from the model to develop an actionable plan. The data consists of 6362620 rows and 11 columns, and is available in CSV format: 
 
